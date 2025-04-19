@@ -1,0 +1,325 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<style>
+    body {
+        font-family: 'Inter', sans-serif;
+    }
+
+    .checkbox {
+        appearance: none;
+        background-color: #fff;
+        border: 1px solid #d1d5db;
+        border-radius: 0.25rem;
+        width: 1rem;
+        height: 1rem;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .checkbox:checked {
+        background-color: #3b82f6;
+        border-color: #3b82f6;
+    }
+
+    .checkbox:checked::after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        top: 2px;
+        width: 5px;
+        height: 9px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+</style>
+
+<body class="bg-white">
+    <div class="flex h-screen bg-white">
+        <!-- Sidebar -->
+        <div class="w-64 border-r border-gray-200 flex flex-col">
+            <div class="p-4 flex items-center gap-2">
+                <button class="rounded-full p-2 hover:bg-gray-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+                <div class="flex items-center gap-2">
+                    <div class="h-8 w-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-medium">
+                        K
+                    </div>
+                    <span class="text-gray-700 font-medium">Kontak</span>
+                </div>
+            </div>
+    
+            <div class="p-4">
+                <a href="form.html"
+                    class="w-full flex items-center justify-start gap-2 bg-blue-50 text-blue-700 hover:bg-blue-100 rounded-full px-4 py-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    <span>Buat kontak</span>
+                </a>
+            </div>
+    
+            <nav class="flex-1 overflow-y-auto">
+                <div class="px-2">
+                    <div class="flex items-center gap-2 p-2 rounded-full bg-blue-50 text-blue-700">
+                        <div class="h-5 w-5 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <span class="font-medium">Kontak</span>
+                        <span class="ml-auto bg-blue-100 text-blue-800 text-xs font-medium px-2 rounded-full">24</span>
+                    </div>
+    
+                    <div class="flex items-center gap-2 p-2 rounded-full hover:bg-gray-100">
+                        <div class="h-5 w-5 flex items-center justify-center text-gray-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <span class="text-gray-700">Sering</span>
+                    </div>
+    
+                    <div class="flex items-center gap-2 p-2 rounded-full hover:bg-gray-100">
+                        <div class="h-5 w-5 flex items-center justify-center text-gray-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                                <line x1="9" y1="21" x2="9" y2="9"></line>
+                            </svg>
+                        </div>
+                        <span class="text-gray-700">Kontak lainnya</span>
+                        <div class="ml-auto text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="mt-6 px-4">
+                    <h3 class="text-sm font-medium text-gray-500 mb-2">Perbaiki & kelola</h3>
+                    <div class="px-2">
+                        <div class="flex items-center gap-2 p-2 rounded-full hover:bg-gray-100">
+                            <div class="h-5 w-5 flex items-center justify-center text-gray-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                                    <path d="M2 2l7.586 7.586"></path>
+                                    <circle cx="11" cy="11" r="2"></circle>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700">Gabungkan & perbaiki</span>
+                            <span class="ml-auto bg-red-500 text-white text-xs font-medium px-2 rounded-full">1</span>
+                        </div>
+    
+                        <div class="flex items-center gap-2 p-2 rounded-full hover:bg-gray-100">
+                            <div class="h-5 w-5 flex items-center justify-center text-gray-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="17 8 12 3 7 8"></polyline>
+                                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700">Impor</span>
+                        </div>
+    
+                        <div class="flex items-center gap-2 p-2 rounded-full hover:bg-gray-100">
+                            <div class="h-5 w-5 flex items-center justify-center text-gray-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="3 6 5 6 21 6"></polyline>
+                                    <path
+                                        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700">Sampah</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="mt-6 px-4">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="text-sm font-medium text-gray-500">Label</h3>
+                        <button class="h-6 w-6 rounded-full hover:bg-gray-100 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    
+        <!-- Main content -->
+        <div class="flex-1 flex flex-col">
+            <!-- Search bar -->
+            <div class="p-2 border-b border-gray-200">
+                <div class="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="text-gray-500">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" placeholder="Telusuri"
+                        class="bg-transparent border-none outline-none flex-1 text-sm">
+                </div>
+            </div>
+    
+            <!-- Header -->
+            <div class="flex items-center justify-between p-4">
+                <h1 class="text-xl font-medium text-gray-800">
+                    Kontak <span class="text-gray-500 text-sm">(24)</span>
+                </h1>
+                <div class="flex items-center gap-2">
+                    <button class="rounded-full p-2 hover:bg-gray-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-gray-600">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                    </button>
+                    <button class="rounded-full p-2 hover:bg-gray-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-gray-600">
+                            <path
+                                d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z">
+                            </path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+    
+            <!-- Table header -->
+            <div class="grid grid-cols-12 px-4 py-2 border-b border-gray-200 text-sm font-medium text-gray-600">
+                <div class="col-span-3 flex items-center gap-2">
+                    <input type="checkbox" class="checkbox">
+                    <span>Nama</span>
+                </div>
+                <div class="col-span-3">Email</div>
+                <div class="col-span-2">Nomor telepon</div>
+                <div class="col-span-2">Jabatan & perusahaan</div>
+                <div class="col-span-1">Label</div>
+                <div class="col-span-1 flex justify-end gap-2">
+                    <button class="h-8 w-8 rounded-full hover:bg-gray-100 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                            <rect x="6" y="14" width="12" height="8"></rect>
+                        </svg>
+                    </button>
+                    <button class="h-8 w-8 rounded-full hover:bg-gray-100 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </button>
+                    <button class="h-8 w-8 rounded-full hover:bg-gray-100 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="1"></circle>
+                            <circle cx="12" cy="5" r="1"></circle>
+                            <circle cx="12" cy="19" r="1"></circle>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+    
+            <!-- Contact list -->
+            <div class="flex-1 overflow-y-auto">
+    
+                <div id="contacts"></div>
+
+                
+                <div id="contactsEmpty" class="flex-1 flex flex-col items-center justify-center bg-white p-8">
+                    <div class="w-48 h-48 bg-gray-100 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-gray-400" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-medium text-gray-800 mb-2">Belum ada kontak</h2>
+                    <p class="text-gray-500 text-center max-w-md mb-6">Kontak Anda akan muncul di sini. Tambahkan kontak baru untuk
+                        mulai mengelola daftar kontak Anda.</p>
+                    <a  href="form.html"
+                        class="flex items-center space-x-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span>Buat kontak baru</span>
+                    </a>
+                    <div class="mt-8 flex items-center space-x-4">
+                        <button
+                            class="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+                            </svg>
+                            <span>Impor kontak</span>
+                        </button>
+                        <button
+                            class="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>Bantuan</span>
+                        </button>
+                    </div>
+                </div>
+    
+               
+            </div>
+        </div>
+    </div>
+    <script src="/src/js/script.js"></script>
+</body>
+
+</html>
