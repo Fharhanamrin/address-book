@@ -55,6 +55,7 @@ function deleteContact() {
     // ...
 }
 
+
 function updateContact() {
     // ...
 }
