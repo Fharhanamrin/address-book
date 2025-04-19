@@ -1,17 +1,17 @@
 const contacts = [
     {
         id: 1,
-        name: "M Haidar Hanif",
+        name: "Fharhan Amrin",
         age: 30,
-        email: "haidar@example.com",
+        email: "fharhan@gmail.com",
         phone: "+62-851-0193029",
         address: "Bandung, Indonesia",
     },
     {
         id: 2,
-        name: "Elon Musk",
+        name: "Saira Amrin",
         age: 50,
-        email: "elon@example.com",
+        email: "sairaazizah@gmail.com",
         phone: "+1-12121-0193029",
         address: "California, USA",
     },
